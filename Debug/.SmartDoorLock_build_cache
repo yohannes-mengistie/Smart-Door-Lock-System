@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out</Path>
+            <Output>
+                <Path>D:\Users\User\Desktop\SmartDoorLock\Debug\List\SmartDoorLock.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

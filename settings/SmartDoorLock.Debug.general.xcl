@@ -1,0 +1,13 @@
+"D:\Program Files\arm\bin\armPROC.dll" 
+
+"D:\Program Files\arm\bin\armSIM2.dll" 
+
+"D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out" 
+
+--plugin="D:\Program Files\arm\bin\armLibSupportUniversal.dll" 
+
+--device_macro="D:\Program Files\arm/config/debugger/NXP/LPC21xx_LPC22xx.dmac" 
+
+
+
+

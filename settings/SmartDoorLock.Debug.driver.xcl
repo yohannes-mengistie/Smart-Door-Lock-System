@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=ARM7TDMI-S" 
+
+"--fpu=None" 
+
+"-p" 
+
+"D:\Program Files\arm\config\debugger\NXP\LPC2138.ddf" 
+
+"--semihosting" 
+
+"--device=LPC2138" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+

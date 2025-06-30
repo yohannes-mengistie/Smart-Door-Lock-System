@@ -1,0 +1,292 @@
+###############################################################################
+#
+# IAR ELF Linker V9.50.1.380/W64 for ARM                  13/Jun/2025  10:32:36
+# Copyright 2007-2023 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out_nochecksum
+#    Map file     =
+#        D:\Users\User\Desktop\SmartDoorLock\Debug\List\SmartDoorLock.map
+#    Command line =
+#        -f
+#        D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out_nochecksum.rsp
+#        (D:\Users\User\Desktop\SmartDoorLock\Debug\Obj\main.o
+#        --no_out_extension -o
+#        D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out_nochecksum
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map D:\Users\User\Desktop\SmartDoorLock\Debug\List\SmartDoorLock.map
+#        --config "D:\Program Files\arm\config\linker\NXP\LPC2138.icf"
+#        --semihosting --entry __iar_program_start --vfe --text_out locale
+#        --cpu=ARM7TDMI-S --fpu=None) --dependencies=n
+#        D:\Users\User\Desktop\SmartDoorLock\Debug\Exe\SmartDoorLock.out_nochecksum.iar_deps
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x1fb] |
+                [from 0x200 to 0x7'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block SVC_STACK with size = 16, alignment = 8 { };
+define block IRQ_STACK with size = 80, alignment = 8 { };
+define block FIQ_STACK with size = 16, alignment = 8 { };
+define block UND_STACK with size = 16, alignment = 8 { };
+define block ABT_STACK with size = 16, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x4000'0000 to 0x4000'003f] |
+                [from 0x4000'0120 to 0x4000'7fdf] {
+          rw, block CSTACK, block SVC_STACK, block IRQ_STACK, block FIQ_STACK,
+          block UND_STACK, block ABT_STACK, block HEAP };
+
+No sections matched the following patterns:
+
+  section .crp  in "P3"
+
+
+  Section          Kind         Address  Aligment    Size  Object
+  -------          ----         -------  --------    ----  ------
+"A0":                                                0x40
+  .intvec          ro code          0x0         4    0x40  cstartup.o [3]
+                                 - 0x40              0x40
+
+"P1", part 1 of 2:                                  0x10e
+  .text            ro code         0x40         4     0x4  IntDivZer.o [3]
+  .text            ro code         0x44         4    0x58  cstartup.o [3]
+  Veneer           ro code         0x9c         4     0xc  - Linker created -
+  Veneer           ro code         0xa8         4     0xc  - Linker created -
+  Veneer           ro code         0xb4         4     0xc  - Linker created -
+  Veneer           ro code         0xc0         4     0xc  - Linker created -
+  .text            ro code         0xcc         4    0x30  cmain.o [3]
+  .text            ro code         0xfc         2     0x4  low_level_init.o [2]
+  .text            ro code        0x100         4    0x32  data_init.o [3]
+  Veneer           ro code        0x134         4    0x10  - Linker created -
+  .text            ro code        0x144         2     0xa  exit.o [2]
+                                - 0x14e             0x10e
+
+"P1", part 2 of 2:                                  0x8e0
+  Veneer           ro code        0x200         4    0x10  - Linker created -
+  .text            ro code        0x210         4   0x5f0  main.o [1]
+  .text            ro code        0x800         4   0x1a4  I32DivMod.o [3]
+  .text            ro code        0x9a4         4    0x20  exit.o [4]
+  .text            ro code        0x9c4         4    0x10  cexit.o [3]
+  .text            ro code        0x9d4         2    0x3c  zero_init3.o [3]
+  .iar.init_table  const          0xa10         4    0x10  - Linker created -
+  .rodata          const          0xa20         4    0x14  main.o [1]
+  .rodata          const          0xa34         4    0x14  main.o [1]
+  .rodata          const          0xa48         4    0x14  main.o [1]
+  .rodata          const          0xa5c         4    0x14  main.o [1]
+  .rodata          const          0xa70         4    0x14  main.o [1]
+  .rodata          const          0xa84         4    0x10  main.o [1]
+  .rodata          const          0xa94         4    0x10  main.o [1]
+  .rodata          const          0xaa4         4    0x10  main.o [1]
+  .rodata          const          0xab4         4    0x10  main.o [1]
+  .rodata          const          0xac4         4    0x10  main.o [1]
+  .rodata          const          0xad4         4     0x4  main.o [1]
+  .text            ro code        0xad8         4     0x4  vectortrap.o [3]
+  .text            ro code        0xadc         4     0x4  xreturnswi.o [4]
+  .rodata          const          0xae0               0x0  zero_init3.o [3]
+                                - 0xae0             0x8e0
+
+"P2", part 1 of 2:                                    0x8
+  .bss             zero     0x4000'0120         4     0x4  main.o [1]
+  .bss             zero     0x4000'0124               0x1  main.o [1]
+  .bss             zero     0x4000'0125               0x1  main.o [1]
+  .bss             zero     0x4000'0126               0x1  main.o [1]
+  .bss             zero     0x4000'0127               0x1  main.o [1]
+                          - 0x4000'0128               0x8
+
+"P2", part 2 of 2:                                 0x1060
+  CSTACK                    0x4000'0128         8  0x1000  <Block>
+    CSTACK         uninit   0x4000'0128            0x1000  <Block tail>
+  IRQ_STACK                 0x4000'1128         8    0x50  <Block>
+    IRQ_STACK      uninit   0x4000'1128              0x50  <Block tail>
+  FIQ_STACK                 0x4000'1178         8    0x10  <Block>
+    FIQ_STACK      uninit   0x4000'1178              0x10  <Block tail>
+                          - 0x4000'1188            0x1060
+
+Absolute sections:                                   0x1c
+  .noinit          uninit   0xe002'8004               0x4  main.o [1]
+  .noinit          uninit   0xe002'8008               0x4  main.o [1]
+  .noinit          uninit   0xe002'800c               0x4  main.o [1]
+  .noinit          uninit   0xe002'8010               0x4  main.o [1]
+  .noinit          uninit   0xe002'8014               0x4  main.o [1]
+  .noinit          uninit   0xe002'8018               0x4  main.o [1]
+  .noinit          uninit   0xe002'801c               0x4  main.o [1]
+                          - 0xe002'8020              0x1c
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x14e        0x1fb      0xae
+        0xae0     0x7'ffff  0x7'f520
+  0x4000'0000  0x4000'003f      0x40
+  0x4000'1188  0x4000'7fdf    0x6e58
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8:
+          0x4000'0120   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data  rw data
+                                                  (abs)
+    ------            -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------
+    Total:
+
+D:\Users\User\Desktop\SmartDoorLock\Debug\Obj: [1]
+    main.o              1'520      184        8       28
+    ----------------------------------------------------
+    Total:              1'520      184        8       28
+
+dl4t_tln.a: [2]
+    exit.o                 10
+    low_level_init.o        4
+    ----------------------------------------------------
+    Total:                 14
+
+rt4t_al.a: [3]
+    I32DivMod.o           420
+    IntDivZer.o             4
+    cexit.o                16
+    cmain.o                48
+    cstartup.o            152
+    data_init.o            50
+    vectortrap.o            4
+    zero_init3.o           60
+    ----------------------------------------------------
+    Total:                754
+
+shs_l.a: [4]
+    exit.o                 32
+    xreturnswi.o            4
+    ----------------------------------------------------
+    Total:                 36
+
+    Gaps                    2
+    Linker created         80       16    4'192
+--------------------------------------------------------
+    Grand Total:        2'406      200    4'200       28
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xa10          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xa20          --   Gb  - Linker created -
+?main                          0xcc         Code  ??  cmain.o [3]
+Abort_Handler                 0xad8         Code  Wk  vectortrap.o [3]
+Alert_System                  0x2af   0x7e  Code  ??  main.o [1]
+Buzzer_Beep                   0x585   0x46  Code  ??  main.o [1]
+CSTACK$$Base            0x4000'0128          --   Gb  - Linker created -
+CSTACK$$Limit           0x4000'1128          --   ??  - Linker created -
+DisplayAccessDenied           0x74b   0x26  Code  ??  main.o [1]
+DisplayAccessGranted          0x719   0x32  Code  ??  main.o [1]
+DisplayEnterPassword          0x6f5   0x20  Code  ??  main.o [1]
+DisplayTooManyAttempts        0x775   0x26  Code  ??  main.o [1]
+DisplayWelcomeMessage         0x6c5   0x2c  Code  ??  main.o [1]
+FIQ_Handler                   0xad8         Code  Wk  vectortrap.o [3]
+FIQ_STACK$$Base         0x4000'1178          --   Gb  - Linker created -
+FIQ_STACK$$Limit        0x4000'1188          --   ??  - Linker created -
+Hyp_Handler                   0xad8         Code  Wk  vectortrap.o [3]
+IRQ_Handler                   0xad8         Code  Wk  vectortrap.o [3]
+IRQ_STACK$$Base         0x4000'1128          --   Gb  - Linker created -
+IRQ_STACK$$Limit        0x4000'1178          --   ??  - Linker created -
+Keypad_GetKey                 0x407   0x1c  Code  ??  main.o [1]
+Keypad_Scan                   0x423  0x102  Code  ??  main.o [1]
+LCD_Clear                     0x3d7   0x12  Code  ??  main.o [1]
+LCD_Command                   0x357   0x30  Code  ??  main.o [1]
+LCD_Data                      0x387   0x30  Code  ??  main.o [1]
+LCD_Init                      0x32d   0x2a  Code  ??  main.o [1]
+LCD_SetCursor                 0x3e9   0x1e  Code  ??  main.o [1]
+LCD_String                    0x3bd   0x1a  Code  ??  main.o [1]
+Motor_AntiClockwise           0x54d   0x18  Code  ??  main.o [1]
+Motor_Clockwise               0x531   0x18  Code  ??  main.o [1]
+Motor_Stop                    0x571   0x10  Code  ??  main.o [1]
+Prefetch_Handler              0xad8         Code  Wk  vectortrap.o [3]
+ProcessPassword               0x5d5   0xf0  Code  ??  main.o [1]
+Region$$Table$$Base           0xa10          --   ??  - Linker created -
+Region$$Table$$Limit          0xa20          --   ??  - Linker created -
+SWI_Handler                   0xad8         Code  Wk  vectortrap.o [3]
+System_Init                   0x261   0x4e  Code  ??  main.o [1]
+Undefined_Handler             0xad8         Code  Wk  vectortrap.o [3]
+_A_IO0CLR               0xe002'800c    0x4  Data  Wk  main.o [1]
+_A_IO0DIR               0xe002'8008    0x4  Data  Wk  main.o [1]
+_A_IO0SET               0xe002'8004    0x4  Data  Wk  main.o [1]
+_A_IO1CLR               0xe002'801c    0x4  Data  Wk  main.o [1]
+_A_IO1DIR               0xe002'8018    0x4  Data  Wk  main.o [1]
+_A_IO1PIN               0xe002'8010    0x4  Data  Wk  main.o [1]
+_A_IO1SET               0xe002'8014    0x4  Data  Wk  main.o [1]
+__aeabi_idiv0                  0x40         Code  ??  IntDivZer.o [3]
+__aeabi_uidiv                 0x800         Code  ??  I32DivMod.o [3]
+__aeabi_uidivmod              0x800         Code  ??  I32DivMod.o [3]
+__cmain                        0xcc         Code  ??  cmain.o [3]
+__exit                        0x9a4   0x20  Code  ??  exit.o [4]
+__iar_data_init3              0x101   0x18  Code  ??  data_init.o [3]
+__iar_program_start            0x44         Code  ??  cstartup.o [3]
+__iar_return_from_swi         0xadc    0x4  Code  ??  xreturnswi.o [4]
+__iar_zero_init3              0x9d5   0x3c  Code  ??  zero_init3.o [3]
+__low_level_init               0xfd    0x4  Code  ??  low_level_init.o [2]
+__vector                        0x0         Data  ??  cstartup.o [3]
+_call_main                     0xe4         Code  ??  cmain.o [3]
+_exit                         0x9c4         Code  ??  cexit.o [3]
+alarmActive             0x4000'0127    0x1  Data  ??  main.o [1]
+correctPassword               0xad4    0x4  Data  ??  main.o [1]
+currentDoorState        0x4000'0126    0x1  Data  ??  main.o [1]
+delay_ms                      0x79b   0x20  Code  ??  main.o [1]
+enteredPassword         0x4000'0120    0x4  Data  ??  main.o [1]
+exit                          0x145    0xa  Code  ??  exit.o [2]
+main                          0x211   0x50  Code  ??  main.o [1]
+passwordIndex           0x4000'0124    0x1  Data  ??  main.o [1]
+wrongAttempts           0x4000'0125    0x1  Data  ??  main.o [1]
+
+
+[1] = D:\Users\User\Desktop\SmartDoorLock\Debug\Obj
+[2] = dl4t_tln.a
+[3] = rt4t_al.a
+[4] = shs_l.a
+
+  2'406 bytes of readonly  code memory
+    200 bytes of readonly  data memory
+  4'200 bytes of readwrite data memory (+ 28 absolute)
+
+Errors: none
+Warnings: none
